@@ -647,7 +647,7 @@ speedOptions.forEach(opt => speedSelect.appendChild(new Option(opt.text, opt.val
 // อัปเดตค่าเมื่อเลือก
 speedSelect.addEventListener('change', e => {
   switch(e.target.value) {
-    case 'very_fast': RANDOM_INTERVAL_I = 100; RANDOM_INTERVAL_II = 130; break;
+    case 'very_fast': RANDOM_INTERVAL_I = 100; RANDOM_INTERVAL_II = 100; break;
     case 'fast': RANDOM_INTERVAL_I = 120; RANDOM_INTERVAL_II = 150; break;
     case 'normal': RANDOM_INTERVAL_I = 150; RANDOM_INTERVAL_II = 180; break;
     case 'slow': RANDOM_INTERVAL_I = 200; RANDOM_INTERVAL_II = 250; break;
@@ -788,3 +788,12 @@ clearGridBtn.addEventListener('click', () => {
 });
 
 document.body.appendChild(clearGridBtn);
+
+document.addEventListener("keydown", function(e) {
+  if (e.key === "1") {
+    uSkill(1,'F');
+  }
+  if (e.key === "2") {
+    uSkill(2,'F');
+  }
+});
